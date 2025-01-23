@@ -23,7 +23,7 @@
  *
  * @see http://php.net/manual/en/features.commandline.webserver.php
  */
-
+// Work around the PHP bug.
 if (PHP_SAPI !== 'cli-server') {
   // Bail out if this is not PHP's Development Server.
   header($_SERVER['SERVER_PROTOCOL'] . ' 403 Forbidden');
